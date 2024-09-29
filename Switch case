@@ -1,0 +1,131 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.helloworld;
+import java.util.Scanner;
+/**
+ *
+ * @author Choirul Adji
+ */
+public class SwitchCaseBP1 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int jumlah, member, menu, submenu;
+        double harga=0, total=0, diskon;
+        
+        System.out.println("WARUNG RUMAH MAKAN SEDERHANA^^");
+        System.out.println("==============================");
+        System.out.println(" Silahkan pilih menu dibawah! ");
+        System.out.println("  vvvvvvvvvvvvvvvvvvvvvvvvvv  ");
+        System.out.println();
+        System.out.println("1. Sate");
+        System.out.println("   1. Ayam    : 1.500 per tusuk");
+        System.out.println("   2. kambing : 3.000 per tusuk");
+        System.out.println();
+        System.out.println("2. Pecel");
+        System.out.println("   1. Lauk ayam  : 13.000 per porsi");
+        System.out.println("   2. Lauk empal : 15.000 per porsi");
+        System.out.println();
+        System.out.println("3. Penyetan");
+        System.out.println("   1. Lauk tahu/tempe :  5.000 per porsi");
+        System.out.println("   2. Lauk telur      :  7.000 per porsi");
+        System.out.println("   3. Lauk ayam       : 10.000 per porsi");
+        System.out.println();
+        
+        
+        //menentukan menu
+        System.out.print("Silahkan pilih menu yang anda inginkan^^ : ");
+        menu=sc.nextInt();
+        
+         if (menu>3){
+            System.out.print("Gimana Sih, kan menunya cuma 3");
+            System.exit(0);
+        }
+         
+        System.out.print("Mau yang apa mas/mbak? :D = ");
+        submenu=sc.nextInt();
+        
+        switch(menu){
+            case 1 :
+                if(submenu==1){
+                    harga = 1500;
+                    
+                }else if(submenu==2){
+                    harga = 3000;
+                    
+                }else{
+                    System.out.println("pilihan tidak ada");
+                }
+                break;
+            
+            case 2 :
+                if(submenu==1){
+                    harga = 13000;
+                }else if(submenu==2){
+                    harga = 15000;
+                }else{
+                    System.out.println("pilihan tidak ada");
+                }
+                break;
+                
+            case 3 :
+                switch(submenu){
+                    case 1 :
+                        harga = 5000;
+                        break;
+                    case 2 :
+                        harga = 7000;
+                        break;
+                    case 3 :
+                        harga = 10000;
+                        break;
+                    default :
+                        System.out.println("Pilihan tidak ada");            
+                }
+                break;  
+                
+        }
+        
+        System.out.println("Berapa jumlah yang anda mau");
+        System.out.print("Masukkan Jumlah : ");
+        jumlah=sc.nextInt();
+        
+        total=harga*jumlah;
+        System.out.println("Total Harga : "+total);
+        System.out.println();
+        
+        System.out.println("Apakah anda memiliki member?^^");
+        System.out.println("1. Ya");
+        System.out.println("2. Tidak");
+        System.out.println("silahkan pilih [1/2]");
+        member=sc.nextInt();
+        System.out.println();
+        if(member==1){
+            System.out.println("Mendapatkan Diskon 5%");
+            diskon=total*0.05;
+            System.out.println("Diskon : "+diskon);
+            total=total-diskon;
+            System.out.println("Total  : "+total);            
+        }else if(member==2){
+            System.out.println("Maaf, anda tidak mendapat diskon");
+            System.out.println("Total harga anda : "+total);
+        }else{
+            System.out.println("Jawaban tidak dapat diterima");
+        }
+        
+           
+        
+        
+       
+        
+        
+        
+            
+          
+            
+        
+               
+    }
+    
+}
