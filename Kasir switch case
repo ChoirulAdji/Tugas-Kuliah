@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.helloworld;
+import java.util.Scanner;
+/**
+ *
+ * @author Choirul Adji
+ */
+public class Kasir1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int pilih=0, jumlah, total=0, grandTotal=0;
+        
+        do{
+            System.out.println("Aplikasi Kasir");
+            System.out.println("1.Tas\n2.Sandal\n3.Sepatu");
+            System.out.println("4.Selesai");
+            System.out.print("Pilih = ");
+            pilih=sc.nextInt(); 
+            
+            switch(pilih){
+                case 1:
+                    System.out.println("Tas [Rp.100.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=100000*jumlah;
+                    System.out.println("Total Harga : "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 2:
+                    System.out.println("Tas [Rp.30.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=30000*jumlah;
+                    System.out.println("Total Harga : "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 3:
+                    System.out.println("Tas [Rp.50.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=50000*jumlah;
+                    System.out.println("Total Harga : "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 4:
+                    System.out.println("Nuhun Kang!");
+                    System.out.println("Total belanja anda senilai : "+grandTotal);
+                   
+                    break;
+                default: System.out.println("GAONOK!");    
+                        
+     
+            }
+        }while(pilih!=4);
+    }
+}        
+        
+  
+    
+
